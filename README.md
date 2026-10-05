@@ -13,7 +13,7 @@ Objetivos: que la gente descargue la app y que los locales gastronómicos se pre
 Buscá estas marcas en `index.html` y reemplazalas por los datos reales:
 
 - `549XXXXXXXXXX` → número de WhatsApp.
-- `hola@modoya.com.ar` → email de contacto.
+- `Email: próximamente` → email de contacto.
 - `[LINKS]` → links de Google Play, App Store, Instagram y TikTok.
 - `[QR]` → QR real de descarga (el actual es decorativo).
 - `PREINSCRIPTOS_INICIAL` → cantidad real de locales pre-inscriptos.
