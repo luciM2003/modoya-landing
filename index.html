@@ -222,7 +222,7 @@ main{position:relative}
   .hero .wrap{grid-template-columns:1.02fr .98fr;align-items:center;gap:30px}
 }
 .hero__bottom{height:30px}
-@media (max-width:899px){.stage{width:calc(100% + 24px);max-width:520px;margin-left:-12px;margin-top:18px}}
+
 
 /* ---------- Mockup estilo iPhone (marco de titanio, Dynamic Island, botones) ---------- */
 .phone{width:290px;max-width:100%;aspect-ratio:290/596;border-radius:17%/8.2%;padding:3.1%;
@@ -553,6 +553,39 @@ body.has-bar .wa{bottom:calc(98px + env(safe-area-inset-bottom,0px))}
   body.has-bar .wa{bottom:calc(100px + env(safe-area-inset-bottom,0px))}
 }
 
+
+/* Íconos de línea */
+.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.15em;flex:none}
+.i--fill{fill:currentColor;stroke:none}
+.pill .i{width:15px;height:15px}
+.badge{display:inline-flex;align-items:center;gap:7px}
+.badge .i{width:1.25em;height:1.25em;color:#B8900A}
+.cat__c .ico{display:grid;place-items:center;width:100%;height:100%}
+.cat__c .ico .i{width:40%;height:40%;color:var(--negro)}
+.step__icon .i{width:42%;height:42%;color:var(--negro)}
+.benefits .ic .i{width:22px;height:22px}
+.counter .i{width:26px;height:26px;color:var(--amarillo)}
+.shop__meta span{display:inline-flex;align-items:center;gap:5px}
+.shop__meta .i{width:14px;height:14px}
+.app__search{display:flex;align-items:center;gap:2cqw}
+.app__shop small .i{color:#E0A800}
+.app__nav span{display:grid;place-items:center}
+.track__steps i .i{width:3.6cqw;height:3.6cqw}
+/* Comida un poco más chica en celular para que no se corte */
+@media (max-width:899px){
+  .stage{margin-top:18px}
+  .fly--burger{width:52%;left:24%;top:3%}
+  .fly--pizza{width:31%;left:1%;top:42%}
+  .fly--lomo{width:36%;right:0;top:33%}
+  .fly--emp{width:29%;right:3%;bottom:6%}
+  .badge--1{left:1%}.badge--2{right:1%}
+}
+@media (max-width:720px){
+  .phones .f1{width:34%;right:0;top:0}
+  .phones .f2{width:30%;left:0;bottom:4%}
+  .phones .f3{width:22%;right:2%;bottom:4%}
+}
+
 /* Entradas al hacer scroll (parten visibles: solo se suavizan) */
 .reveal{transition:transform .8s cubic-bezier(.2,.8,.2,1),opacity .8s}
 .js .reveal:not(.is-in){transform:translateY(30px);opacity:.2}
@@ -581,6 +614,26 @@ document.addEventListener("error", e => {
      ===================================================================== -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
+
+    <!-- Íconos de línea (reemplazan a los emojis) -->
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-food" viewBox="0 0 24 24"><path d="M4 11h16a8 8 0 0 0-16 0zM3 14h18M5 17h14a2 2 0 0 1-2 3H7a2 2 0 0 1-2-3z"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></symbol>
+    <symbol id="i-store" viewBox="0 0 24 24"><path d="M4 10v10h16V10M3 10l2-6h14l2 6M3 10a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0M10 20v-5h4v5"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.5 12h11L21 7H6.2"/></symbol>
+    <symbol id="i-moto" viewBox="0 0 24 24"><circle cx="6" cy="17" r="3"/><circle cx="18" cy="17" r="3"/><path d="M9 17h5l3-7h-3M14 5h2.5l1.5 5M3 13h7l2 4"/><rect x="2" y="6" width="6" height="5" rx="1"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h12M9 12h12M9 18h12M4 6h.01M4 12h.01M4 18h.01"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M5 12v9h14v-9M12 8S11 3 8 3a2.5 2.5 0 0 0 0 5M12 8s1-5 4-5a2.5 2.5 0 0 1 0 5"/></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 22c4 0 7-3 7-7 0-4-3-6-4-10-2 2-3 4-3 6-1-1-2-2-2-4-3 2-5 5-5 8 0 4 3 7 7 7z"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></symbol>
+    <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M6 2h12v20l-3-2-3 2-3-2-3 2zM9 7h6M9 11h6M9 15h4"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></symbol>
     <symbol id="moto" viewBox="0 0 64 44">
       <rect x="3" y="6" width="20" height="17" rx="3" fill="#F5C518" stroke="#0A0A0A" stroke-width="2"/>
       <path d="M7 12h12M7 16h8" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"/>
@@ -640,7 +693,7 @@ document.addEventListener("error", e => {
   <section class="hero" id="inicio">
     <div class="wrap">
       <div class="hero__copy">
-        <span class="pill" data-stop="S"><span class="dot"></span>📍 Ahora en Malargüe</span>
+        <span class="pill" data-stop="S"><span class="dot"></span><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Ahora en Malargüe</span>
         <h1><span class="w" style="--i:0">El</span> <span class="w" style="--i:1">mejor</span> <span class="w" style="--i:2">sabor,</span> <span class="w" style="--i:3">en</span> <span class="w" style="--i:4">tu</span> <span class="w" style="--i:5">casa.</span> <span class="w ya" style="--i:6"><span class="speed" aria-hidden="true"><i></i><i></i><i></i></span>YA.</span></h1>
         <p class="hero__sub">Pedí a los locales de Malargüe desde una sola app. Rápido, simple y local.</p>
         <div class="hero__ctas">
@@ -671,9 +724,9 @@ document.addEventListener("error", e => {
         <div class="fly fly--emp"><img class="food" src="img/empanadas-sarten.webp" alt="Empanadas"></div>
         <div class="fly fly--burger"><img class="food" src="img/burger-doble.webp" alt="Hamburguesa doble con cheddar"></div>
         <div class="fly fly--lomo"><img class="food" src="img/lomo.webp" alt="Lomo"></div>
-        <span class="badge badge--1">🛵 Delivery en minutos</span>
-        <span class="badge badge--2">🍔 Burgers, pizzas y lomos</span>
-        <span class="badge badge--3">💛 100% local</span>
+        <span class="badge badge--1"><svg class="i" aria-hidden="true"><use href="#i-moto"/></svg>Delivery en minutos</span>
+        <span class="badge badge--2"><svg class="i" aria-hidden="true"><use href="#i-food"/></svg>Burgers, pizzas y lomos</span>
+        <span class="badge badge--3"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg>100% local</span>
       </div>
     </div>
     <div class="hero__bottom"></div>
@@ -699,7 +752,7 @@ document.addEventListener("error", e => {
       </div>
 
       <div class="cats reveal-stagger" role="group" aria-label="Categorías">
-        <button class="cat is-active" data-cat="todo" style="--i:0"><span class="cat__c"><span class="ico" aria-hidden="true">🍽️</span></span>Todo</button>
+        <button class="cat is-active" data-cat="todo" style="--i:0"><span class="cat__c"><span class="ico" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-grid"/></svg></span></span>Todo</button>
         <button class="cat" data-cat="hamburguesas" style="--i:1"><span class="cat__c"><img class="food" src="img/burger-triple.webp" alt=""></span>Hamburguesas</button>
         <button class="cat" data-cat="pizzas" style="--i:2"><span class="cat__c"><img class="food" src="img/pizza-plato.webp" alt=""></span>Pizzas</button>
         <button class="cat" data-cat="lomos" style="--i:3"><span class="cat__c"><img class="food" src="img/lomo.webp" alt=""></span>Lomos</button>
@@ -742,15 +795,15 @@ document.addEventListener("error", e => {
         <div class="steps__road" aria-hidden="true"></div>
         <div class="steps__moto" aria-hidden="true"><svg viewBox="0 0 64 44"><use href="#moto"/></svg></div>
         <div class="step reveal">
-          <div class="step__icon" aria-hidden="true">🏪</div>
+          <div class="step__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-store"/></svg></div>
           <div><div class="step__n">Paso 1</div><h3>Elegí tu local</h3><p>Mirá qué está abierto cerca tuyo, con menú, precios y costo de envío a la vista.</p></div>
         </div>
         <div class="step reveal">
-          <div class="step__icon" aria-hidden="true">🛒</div>
+          <div class="step__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-cart"/></svg></div>
           <div><div class="step__n">Paso 2</div><h3>Armá tu pedido</h3><p>Sumá lo que quieras, poné tu dirección y pagá con Mercado Pago, tarjeta o efectivo.</p></div>
         </div>
         <div class="step reveal">
-          <div class="step__icon" aria-hidden="true">🛵</div>
+          <div class="step__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-moto"/></svg></div>
           <div><div class="step__n">Paso 3</div><h3>Recibilo YA</h3><p>Seguí al repartidor en vivo y confirmá la entrega con tu código de 4 dígitos.</p></div>
         </div>
       </div>
@@ -774,13 +827,13 @@ document.addEventListener("error", e => {
         <h2 class="h2">¿Tenés un local? <span class="y">Subite a Modo Ya.</span></h2>
         <p class="lead">Estamos sumando a los primeros locales de Malargüe. Pre-inscribite gratis y sé de los primeros en aparecer en la app.</p>
         <ul class="benefits reveal-stagger">
-          <li style="--i:0"><span class="ic" aria-hidden="true">📈</span><div><b>Más ventas sin salir del local</b><span>Te llegan pedidos de todo Malargüe desde el celular.</span></div></li>
-          <li style="--i:1"><span class="ic" aria-hidden="true">📋</span><div><b>Tu menú online, siempre actualizado</b><span>Cambiás precios, fotos y promos en un minuto.</span></div></li>
-          <li style="--i:2"><span class="ic" aria-hidden="true">🛵</span><div><b>Repartidores o delivery propio</b><span>Usá nuestros cadetes o seguí con los tuyos.</span></div></li>
-          <li style="--i:3"><span class="ic" aria-hidden="true">📲</span><div><b>Panel simple para gestionar pedidos</b><span>Recibís, preparás y entregás con código de retiro.</span></div></li>
-          <li style="--i:4"><span class="ic" aria-hidden="true">🎁</span><div><b>Beneficio de lanzamiento</b><span>Condiciones especiales para los primeros inscriptos.</span></div></li>
+          <li style="--i:0"><span class="ic" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-trend"/></svg></span><div><b>Más ventas sin salir del local</b><span>Te llegan pedidos de todo Malargüe desde el celular.</span></div></li>
+          <li style="--i:1"><span class="ic" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-list"/></svg></span><div><b>Tu menú online, siempre actualizado</b><span>Cambiás precios, fotos y promos en un minuto.</span></div></li>
+          <li style="--i:2"><span class="ic" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-moto"/></svg></span><div><b>Repartidores o delivery propio</b><span>Usá nuestros cadetes o seguí con los tuyos.</span></div></li>
+          <li style="--i:3"><span class="ic" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg></span><div><b>Panel simple para gestionar pedidos</b><span>Recibís, preparás y entregás con código de retiro.</span></div></li>
+          <li style="--i:4"><span class="ic" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-gift"/></svg></span><div><b>Beneficio de lanzamiento</b><span>Condiciones especiales para los primeros inscriptos.</span></div></li>
         </ul>
-        <div class="counter" aria-live="polite">🔥 <b id="counter">0</b> locales ya se pre-inscribieron</div>
+        <div class="counter" aria-live="polite"><svg class="i" aria-hidden="true"><use href="#i-flame"/></svg> <b id="counter">0</b> locales ya se pre-inscribieron</div>
       </div>
 
       <div class="form-card reveal" id="formCard">
@@ -850,7 +903,7 @@ document.addEventListener("error", e => {
             <label class="check"><input type="checkbox" id="f-ok" name="acepta_contacto"> Acepto que el equipo de Modo Ya me contacte por WhatsApp o email.</label>
             <span class="err">Necesitamos tu permiso para contactarte.</span>
           </div>
-          <button class="btn btn--primary btn--lg" type="submit" id="submitBtn">Pre-inscribir mi local 🛵</button>
+          <button class="btn btn--primary btn--lg" type="submit" id="submitBtn">Pre-inscribir mi local</button>
           <p class="form-note">Tus datos solo se usan para contactarte por la pre-inscripción.</p>
         </form>
         <svg class="cross-moto" viewBox="0 0 64 44" aria-hidden="true"><use href="#moto"/></svg>
@@ -923,7 +976,7 @@ document.addEventListener("error", e => {
         <div class="final__pinwrap"><svg class="final__pin" viewBox="0 0 120 120" aria-hidden="true" data-stop="end"><use href="#logo-pin"/></svg></div>
       </div>
       <h2>¡Entregado!</h2>
-      <p>Hecho en Malargüe, para Malargüe 💛</p>
+      <p>Hecho en Malargüe, para Malargüe.</p>
       <div class="hero__ctas">
         <a class="btn btn--primary btn--lg" href="#descargar">Descargar la app</a>
         <a class="btn btn--ghost btn--lg" href="#para-locales">Sumá tu local</a>
@@ -1003,10 +1056,10 @@ const SCREENS = {
   home: `
     <div class="app">
       <div class="app__top">
-        <div><div class="app__loc">📍 Malargüe Centro ▾</div><div class="app__hi">Hola, ¿Qué pedimos hoy?</div></div>
+        <div><div class="app__loc"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg> Malargüe Centro ▾</div><div class="app__hi">Hola, ¿Qué pedimos hoy?</div></div>
         <div class="app__avatar">MY</div>
       </div>
-      <div class="app__search">🔍 ¿Qué se te antoja hoy?</div>
+      <div class="app__search"><svg class="i" aria-hidden="true"><use href="#i-search"/></svg> ¿Qué se te antoja hoy?</div>
       <div class="app__banner"><b>El mejor sabor, en tu casa</b><small>Envío gratis con MODOYA</small><img src="img/burger-triple.webp" alt=""></div>
       <div class="app__cats">
         <div class="app__cat is-on"><span><img src="img/burger-doble.webp" alt=""></span>Burgers</div>
@@ -1015,9 +1068,9 @@ const SCREENS = {
         <div class="app__cat"><span><img src="img/helado.webp" alt=""></span>Postres</div>
       </div>
       <div class="app__h">Locales en Malargüe <small>Ver todos</small></div>
-      <div class="app__shop"><div class="th"><img src="img/pizza-plato.webp" alt=""></div><div><b>Pizzería Don Luis</b><small>⭐ 4.9 · 20–30 min</small></div><span class="open">Abierto</span></div>
-      <div class="app__shop"><div class="th"><img src="img/empanadas-sarten.webp" alt=""></div><div><b>Rotisería El Sol</b><small>⭐ 4.7 · 25–35 min</small></div><span class="open">Abierto</span></div>
-      <div class="app__nav"><span class="on">⌂</span><span>🔍</span><span>🧾</span><span>👤</span></div>
+      <div class="app__shop"><div class="th"><img src="img/pizza-plato.webp" alt=""></div><div><b>Pizzería Don Luis</b><small><svg class="i i--fill" aria-hidden="true"><use href="#i-star"/></svg> 4.9 · 20–30 min</small></div><span class="open">Abierto</span></div>
+      <div class="app__shop"><div class="th"><img src="img/empanadas-sarten.webp" alt=""></div><div><b>Rotisería El Sol</b><small><svg class="i i--fill" aria-hidden="true"><use href="#i-star"/></svg> 4.7 · 25–35 min</small></div><span class="open">Abierto</span></div>
+      <div class="app__nav"><span class="on"><svg class="i" aria-hidden="true"><use href="#i-home"/></svg></span><span><svg class="i" aria-hidden="true"><use href="#i-search"/></svg></span><span><svg class="i" aria-hidden="true"><use href="#i-receipt"/></svg></span><span><svg class="i" aria-hidden="true"><use href="#i-user"/></svg></span></div>
     </div>`,
   track: `
     <div class="track">
@@ -1025,9 +1078,9 @@ const SCREENS = {
         <svg viewBox="0 0 100 100" preserveAspectRatio="none"><path class="route-anim" d="M15 20 Q40 30 45 55 T88 82" fill="none" stroke="#0A0A0A" stroke-width="2"/><circle cx="15" cy="20" r="4" fill="#0A0A0A"/><circle cx="88" cy="82" r="5" fill="#F5C518" stroke="#0A0A0A" stroke-width="1.5"/><circle cx="45" cy="55" r="7" fill="#0A0A0A"/><circle cx="45" cy="55" r="3" fill="#F5C518"/></svg>
       </div>
       <div class="track__body">
-        <span class="track__chip">● Repartidor en camino 🛵</span>
+        <span class="track__chip">● Repartidor en camino</span>
         <div class="track__eta">8–12 <small>min</small></div>
-        <div class="track__steps"><span><i>✓</i>Confirmado</span><span><i>✓</i>En cocina</span><span><i>🛵</i>En camino</span><span class="off"><i>⌂</i>Entregado</span></div>
+        <div class="track__steps"><span><i>✓</i>Confirmado</span><span><i>✓</i>En cocina</span><span><i><svg class="i" aria-hidden="true"><use href="#i-moto"/></svg></i>En camino</span><span class="off"><i><svg class="i" aria-hidden="true"><use href="#i-home"/></svg></i>Entregado</span></div>
         <div class="track__pin"><span>Código de entrega</span><b>7391</b></div>
       </div>
     </div>`
@@ -1089,7 +1142,7 @@ carousel.innerHTML = LOCALES.map(l => `
   <article class="shop" data-cat="${l.c}">
     <div class="shop__img"><span class="open">Abierto</span><img class="food" src="img/${l.img}.webp" alt="" loading="lazy"></div>
     <div class="shop__body"><b>${l.n}</b><p>${l.r}</p>
-      <div class="shop__meta"><span>⏱ ${l.t}</span><span>🛵 Envío local</span></div></div>
+      <div class="shop__meta"><span><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg> ${l.t}</span><span><svg class="i" aria-hidden="true"><use href="#i-moto"/></svg> Envío local</span></div></div>
   </article>`).join("");
 document.querySelectorAll(".cat").forEach(btn => btn.addEventListener("click", () => {
   document.querySelectorAll(".cat").forEach(b => b.classList.toggle("is-active", b === btn));
@@ -1194,7 +1247,7 @@ function layoutRoute(){
     const pin = document.createElement("div");
     pin.className = "route__pin";
     pin.style.top = (c.y - routeTop) + "px";
-    pin.innerHTML = `<span>${c.id === "S" ? "▶" : c.id === "end" ? "✓" : c.id}</span>`;
+    pin.innerHTML = `<span>${c.id === "S" ? "↓" : c.id === "end" ? "✓" : c.id}</span>`;
     if (c.id === "end") pin.style.opacity = 0;   // el pin final es el logo grande
     route.appendChild(pin);
     return { pin, y: c.y - routeTop };
@@ -1336,9 +1389,9 @@ form.addEventListener("submit", async e => {
     card.classList.add("is-sent");
     counterValue += 1;
     counterEl.textContent = counterValue;
-    submitBtn.textContent = "Pre-inscribir mi local 🛵";
+    submitBtn.textContent = "Pre-inscribir mi local";
   } catch (err) {
-    submitBtn.textContent = "No se pudo enviar. Probá de nuevo 🛵";
+    submitBtn.textContent = "No se pudo enviar. Probá de nuevo";
   } finally {
     submitBtn.disabled = false;
   }
