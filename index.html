@@ -188,23 +188,23 @@ main{position:relative}
 .sun::before{content:"";position:absolute;inset:-9%;border-radius:50%;border:2px dashed rgba(245,197,24,.3);animation:spin 40s linear infinite}
 .sun::after{content:none}
 .hero__mountains{left:-20%;width:140%;bottom:8%;height:24%}
-.stage .phone{left:50%;top:56%;width:42%;translate:-50% -50%;rotate:-8deg;
+.stage .phone{left:50%;top:54%;width:44%;translate:-50% -50%;rotate:-8deg;
   transform:perspective(900px) translate(calc(var(--mx) * -10px),calc(var(--my) * -8px)) rotateY(calc(var(--mx) * 14deg)) rotateX(calc(var(--my) * -10deg));transition:transform .4s ease-out}
 .fly{transform:translate(calc(var(--mx) * var(--d) * 1px),calc(var(--my) * var(--d) * 1px));transition:transform .4s ease-out}
 .fly > .food{width:100%;animation:floaty 6s ease-in-out infinite;animation-delay:var(--fd,0s)}
 .fly::before{content:"";position:absolute;right:92%;top:46%;width:28%;height:14%;opacity:.85;
   background:linear-gradient(var(--amarillo),var(--amarillo)) 100% 0/100% 3px no-repeat,linear-gradient(var(--amarillo),var(--amarillo)) 100% 50%/65% 3px no-repeat,linear-gradient(var(--amarillo),var(--amarillo)) 100% 100%/85% 3px no-repeat}
-.fly--burger{left:21%;top:-1%;width:60%;z-index:6;--d:26}
+.fly--burger{left:50%;top:0;width:48%;z-index:6;--d:26}
 .fly--burger::before{display:none}
-.fly--pizza{left:-4%;top:40%;width:38%;z-index:4;--d:-18}
+.fly--pizza{left:-2%;top:16%;width:33%;z-index:4;--d:-18}
 .fly--pizza > .food{animation:spin 30s linear infinite}
-.fly--lomo{right:-6%;top:30%;width:44%;z-index:7;--d:20;--fd:-2s}
-.fly--emp{right:0;bottom:3%;width:34%;z-index:5;--d:-12;--fd:-4s}
+.fly--lomo{right:-4%;top:52%;width:40%;z-index:7;--d:20;--fd:-2s}
+.fly--emp{left:0;bottom:4%;width:30%;z-index:5;--d:-12;--fd:-4s}
 .fly--emp::before{display:none}
 .badge{z-index:8;background:var(--blanco);color:var(--negro);border-radius:14px;padding:8px 12px;font-weight:700;font-size:clamp(11px,2.6vw,14px);white-space:nowrap;box-shadow:0 18px 36px rgba(0,0,0,.45)}
-.badge--1{left:0;top:24%}
-.badge--2{right:0;top:68%}
-.badge--3{left:6%;bottom:5%}
+.badge--1{left:0;top:50%}
+.badge--2{right:0;top:42%}
+.badge--3{left:46%;bottom:2%}
 @keyframes floaty{50%{translate:0 -4%;rotate:3deg}}
 @keyframes spin{to{rotate:360deg}}
 @keyframes bob{50%{translate:0 -8px}}
@@ -225,20 +225,21 @@ main{position:relative}
 
 
 /* ---------- Mockup estilo iPhone (marco de titanio, Dynamic Island, botones) ---------- */
-.phone{width:290px;max-width:100%;aspect-ratio:290/596;border-radius:17%/8.2%;padding:3.1%;
-  border:4px solid transparent;
-  background:linear-gradient(#050505,#050505) padding-box,
-    linear-gradient(145deg,#4a4a4f 0%,#e4e4ea 14%,#8d8d94 28%,#2f2f34 52%,#b9b9c0 74%,#56565c 88%,#d0d0d6 100%) border-box;
-  box-shadow:0 0 0 1px rgba(0,0,0,.7),inset 0 0 0 1.5px rgba(255,255,255,.08),0 50px 90px -25px rgba(0,0,0,.75)}
+.phone{width:290px;max-width:100%;aspect-ratio:290/596;border-radius:17%/8.2%;padding:2.9%;
+  border:5px solid transparent;
+  background:linear-gradient(#030303,#030303) padding-box,
+    linear-gradient(160deg,#5e5c58 0%,#d8d5cf 10%,#9a978f 22%,#45433f 45%,#7b7872 62%,#cfccc5 82%,#56544f 100%) border-box;
+  box-shadow:0 0 0 1px #111,0 0 0 2px rgba(255,255,255,.18),inset 0 0 0 1px rgba(255,255,255,.12),inset 0 0 0 3px #000,
+    -12px 30px 40px -20px rgba(0,0,0,.6),0 60px 100px -30px rgba(0,0,0,.85)}
 /* Dynamic Island con lente de cámara */
 .phone::before{content:"";position:absolute;top:2.9%;left:50%;transform:translateX(-50%);width:31%;height:3.5%;border-radius:99px;z-index:6;
   background:radial-gradient(circle at 80% 50%,#1b2a4a 0 9%,#0b0b14 10% 17%,transparent 18%),#000}
 /* Botones laterales */
-.hw{position:absolute;width:4px;border-radius:3px;background:linear-gradient(90deg,#3a3a3f,#cfcfd6 45%,#58585e)}
-.hw--act{left:-7px;top:16%;height:4.5%}
-.hw--v1{left:-7px;top:24%;height:8%}
-.hw--v2{left:-7px;top:34%;height:8%}
-.hw--pwr{right:-7px;top:27%;height:12%}
+.hw{position:absolute;width:4px;border-radius:3px;background:linear-gradient(90deg,#45433f,#d8d5cf 45%,#5e5c58);box-shadow:0 0 0 .5px rgba(0,0,0,.6)}
+.hw--act{left:-8px;top:16%;height:4.5%}
+.hw--v1{left:-8px;top:24%;height:8%}
+.hw--v2{left:-8px;top:34%;height:8%}
+.hw--pwr{right:-8px;top:27%;height:12%}
 .screen{width:100%;height:100%;border-radius:13.5%/6.6%;overflow:hidden;background:var(--gris);color:var(--negro);position:relative;container-type:inline-size;isolation:isolate}
 /* Reflejo del vidrio + indicador de inicio */
 .screen::after{content:"";position:absolute;inset:0;z-index:10;pointer-events:none;border-radius:inherit;
@@ -574,17 +575,70 @@ body.has-bar .wa{bottom:calc(98px + env(safe-area-inset-bottom,0px))}
 /* Comida un poco más chica en celular para que no se corte */
 @media (max-width:899px){
   .stage{margin-top:18px}
-  .fly--burger{width:52%;left:24%;top:3%}
-  .fly--pizza{width:31%;left:1%;top:42%}
-  .fly--lomo{width:36%;right:0;top:33%}
-  .fly--emp{width:29%;right:3%;bottom:6%}
-  .badge--1{left:1%}.badge--2{right:1%}
+  .fly--burger{width:42%;left:54%;top:2%}
+  .fly--pizza{width:30%;left:1%;top:18%}
+  .fly--lomo{width:36%;right:0;top:54%}
+  .fly--emp{width:27%;left:1%;bottom:6%}
+  .badge--1{left:1%}.badge--2{right:1%}.badge--3{left:42%}
 }
 @media (max-width:720px){
   .phones .f1{width:34%;right:0;top:0}
   .phones .f2{width:30%;left:0;bottom:4%}
   .phones .f3{width:22%;right:2%;bottom:4%}
 }
+
+
+/* =====================================================================
+   PARADA 4 · RIDERS
+   ===================================================================== */
+.riders .wrap{display:grid;gap:44px;align-items:start}
+@media (min-width:981px){.riders .wrap{grid-template-columns:1fr 1.05fr;gap:56px}}
+.riders .h2 .y{background:var(--amarillo);padding:0 .12em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.riders .benefits b{color:var(--negro)}
+.riders .benefits span{color:var(--gris-texto)}
+.rider-earn{margin-top:30px;display:flex;align-items:center;gap:16px;background:var(--negro);color:var(--blanco);border-radius:20px;padding:16px 20px;max-width:420px}
+.rider-earn__ic{flex:none;width:52px;height:52px;border-radius:16px;background:var(--amarillo);color:var(--negro);display:grid;place-items:center}
+.rider-earn__ic .i{width:26px;height:26px}
+.rider-earn b{display:block;font-family:var(--f-display);font-style:italic;font-weight:900;font-stretch:115%;font-size:20px;line-height:1.1}
+.rider-earn span{font-size:14px;color:rgba(255,255,255,.7)}
+.riders .form-card{box-shadow:0 30px 60px -20px rgba(10,10,10,.25),0 0 0 1px rgba(10,10,10,.06)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{position:relative}
+.chips input{position:absolute;opacity:0;width:1px;height:1px}
+.chips span{display:inline-block;padding:9px 14px;border-radius:99px;background:var(--gris);font-weight:600;font-size:14.5px;cursor:pointer;border:2px solid transparent;transition:background .2s}
+.chips input:checked + span{background:var(--amarillo);border-color:var(--negro)}
+.chips input:focus-visible + span{outline:3px solid var(--amarillo);outline-offset:2px}
+
+
+/* =====================================================================
+   PARADA 1 · SERVICIOS
+   ===================================================================== */
+.servicios{background:var(--negro);padding-top:56px}
+.servicios .lead{color:rgba(255,255,255,.75)}
+.serv-groups{display:grid;gap:34px;margin-top:40px}
+@media (min-width:900px){.serv-groups{grid-template-columns:1fr 1fr;gap:28px}}
+.serv-group h3{font-size:13px;font-family:var(--f-body);font-style:normal;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amarillo);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.serv-group h3::after{content:"";flex:1;height:1px;background:rgba(255,255,255,.12)}
+.serv-cards{display:grid;gap:14px}
+.serv{position:relative;display:flex;gap:16px;align-items:flex-start;padding:20px;border-radius:22px;background:var(--negro-3);border:1px solid rgba(255,255,255,.07);text-decoration:none;color:var(--blanco);overflow:hidden;transition:transform .3s cubic-bezier(.2,1.4,.4,1),border-color .3s,background .3s}
+.serv:hover{transform:translateY(-4px);border-color:rgba(245,197,24,.5);background:#242424}
+.serv__ic{flex:none;width:52px;height:52px;border-radius:16px;background:var(--amarillo);color:var(--negro);display:grid;place-items:center}
+.serv__ic .i{width:26px;height:26px}
+.serv__txt{min-width:0}
+.serv__txt b{display:block;font-family:var(--f-display);font-style:italic;font-weight:900;font-stretch:115%;font-size:clamp(19px,4.6vw,22px);line-height:1.1}
+.serv__txt p{color:rgba(255,255,255,.68);font-size:14.5px;margin-top:6px}
+.serv__go{display:inline-flex;align-items:center;gap:6px;margin-top:10px;color:var(--amarillo);font-weight:700;font-size:14px}
+.serv__go .i{width:16px;height:16px;transition:transform .3s}
+.serv:hover .serv__go .i{transform:translateX(4px)}
+.serv--rider{margin-top:22px;background:var(--amarillo);color:var(--negro);border:0;align-items:center;flex-wrap:wrap}
+.serv--rider:hover{background:var(--amarillo-2)}
+.serv--rider .serv__ic{background:var(--negro);color:var(--amarillo)}
+.serv--rider .serv__txt{flex:1 1 220px}
+.serv--rider .serv__txt p{color:rgba(10,10,10,.72)}
+.serv--rider .btn{flex:none}
+@media (max-width:560px){.serv--rider .btn{flex:1 1 100%}}
+.hero__rider{display:inline-flex;align-items:center;gap:6px;margin-top:14px;color:var(--blanco);font-weight:600;font-size:14.5px;text-decoration:none;border-bottom:2px solid var(--amarillo);padding-bottom:2px}
+.hero__rider .i{width:16px;height:16px;color:var(--amarillo)}
 
 /* Entradas al hacer scroll (parten visibles: solo se suavizan) */
 .reveal{transition:transform .8s cubic-bezier(.2,.8,.2,1),opacity .8s}
@@ -614,6 +668,13 @@ document.addEventListener("error", e => {
      ===================================================================== -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
+
+    <symbol id="i-box" viewBox="0 0 24 24"><path d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5z"/><path d="M3 7.5 12 12l9-4.5M12 12v9M7.5 5.2l9 4.6"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+
+    <symbol id="i-wallet" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="14" rx="2.5"/><path d="M3 10h18M16 15h2M7 6l9-3 1 3"/></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="2.5"/><circle cx="18" cy="5" r="2.5"/><path d="M8.5 19H16a3.5 3.5 0 0 0 0-7H8a3.5 3.5 0 0 1 0-7h7.5"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
 
     <!-- Íconos de línea (reemplazan a los emojis) -->
     <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
@@ -666,8 +727,9 @@ document.addEventListener("error", e => {
     </a>
     <ul class="nav__links" id="navLinks">
       <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#como-funciona">Cómo funciona</a></li>
+      <li><a href="#servicios">Servicios</a></li>
       <li><a href="#para-locales">Para locales</a></li>
+      <li><a href="#riders">Riders</a></li>
       <li><a href="#descargar">Descargar</a></li>
     </ul>
     <div class="nav__ctas">
@@ -695,11 +757,12 @@ document.addEventListener("error", e => {
       <div class="hero__copy">
         <span class="pill" data-stop="S"><span class="dot"></span><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Ahora en Malargüe</span>
         <h1><span class="w" style="--i:0">El</span> <span class="w" style="--i:1">mejor</span> <span class="w" style="--i:2">sabor,</span> <span class="w" style="--i:3">en</span> <span class="w" style="--i:4">tu</span> <span class="w" style="--i:5">casa.</span> <span class="w ya" style="--i:6"><span class="speed" aria-hidden="true"><i></i><i></i><i></i></span>YA.</span></h1>
-        <p class="hero__sub">Pedí a los locales de Malargüe desde una sola app. Rápido, simple y local.</p>
+        <p class="hero__sub">Pedí comida, hacé mandados y mandá lo que necesites en Malargüe. Rápido, simple y local.</p>
         <div class="hero__ctas">
           <a class="btn btn--primary btn--lg" href="#descargar">Descargar la app</a>
           <a class="btn btn--ghost btn--lg" href="#para-locales">Soy un local</a>
         </div>
+        <a class="hero__rider" href="#riders"><svg class="i" aria-hidden="true"><use href="#i-moto"/></svg>¿Tenés moto? Sumate como rider</a>
         <div class="trust"><span>Gratis</span><span>Android y iPhone</span><span>Envío gratis con <b class="code">MODOYA</b></span></div>
         <div class="social">
           <!-- [FOTOS] Reemplazar por fotos reales de clientes -->
@@ -725,7 +788,7 @@ document.addEventListener("error", e => {
         <div class="fly fly--burger"><img class="food" src="img/burger-doble.webp" alt="Hamburguesa doble con cheddar"></div>
         <div class="fly fly--lomo"><img class="food" src="img/lomo.webp" alt="Lomo"></div>
         <span class="badge badge--1"><svg class="i" aria-hidden="true"><use href="#i-moto"/></svg>Delivery en minutos</span>
-        <span class="badge badge--2"><svg class="i" aria-hidden="true"><use href="#i-food"/></svg>Burgers, pizzas y lomos</span>
+        <span class="badge badge--2"><svg class="i" aria-hidden="true"><use href="#i-food"/></svg>Comida y mandados</span>
         <span class="badge badge--3"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg>100% local</span>
       </div>
     </div>
@@ -738,6 +801,53 @@ document.addEventListener("error", e => {
     <div class="ticker ticker--y"><div class="ticker__track" data-ticker="Hamburguesas|burger-triple · Pizzas|pizza-plato · Lomos|lomo · Empanadas|empanadas-sarten · Helados|helado ·"></div></div>
   </div>
 
+
+  <!-- =====================================================================
+       PARADA 1 · TODO LO QUE PODÉS HACER CON MODO YA
+       ===================================================================== -->
+  <section class="section servicios" id="servicios">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="stop-label" data-stop="1"><b>1</b> Parada 1</div>
+        <h2 class="h2">Mucho más que <span class="underline-speed">delivery</span>.</h2>
+        <p class="lead">Pedí comida, mandá lo que necesites o usá nuestra flota de riders para tu negocio. Todo desde Modo Ya.</p>
+      </div>
+      <div class="serv-groups">
+        <div class="serv-group reveal">
+          <h3>Para vos</h3>
+          <div class="serv-cards">
+            <a class="serv" href="#que-comemos">
+              <span class="serv__ic"><svg class="i" aria-hidden="true"><use href="#i-food"/></svg></span>
+              <span class="serv__txt"><b>Pedí comida</b><p>Hamburguesas, pizzas, lomos, empanadas y helado de los locales de Malargüe.</p><span class="serv__go">Ver locales <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+            </a>
+            <a class="serv" href="#descargar">
+              <span class="serv__ic"><svg class="i" aria-hidden="true"><use href="#i-box"/></svg></span>
+              <span class="serv__txt"><b>Hacé un mandado</b><p>¿Te olvidaste algo, tenés que mandar un paquete o buscar una compra? Un rider lo lleva por vos.</p><span class="serv__go">Pedilo en la app <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+            </a>
+          </div>
+        </div>
+        <div class="serv-group reveal">
+          <h3>Para tu local</h3>
+          <div class="serv-cards">
+            <a class="serv" href="#para-locales">
+              <span class="serv__ic"><svg class="i" aria-hidden="true"><use href="#i-store"/></svg></span>
+              <span class="serv__txt"><b>Vendé por la app</b><p>Subí tu menú y recibí pedidos de todo Malargüe. Nosotros los llevamos.</p><span class="serv__go">Sumá tu local <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+            </a>
+            <a class="serv" href="#para-locales">
+              <span class="serv__ic"><svg class="i" aria-hidden="true"><use href="#i-route"/></svg></span>
+              <span class="serv__txt"><b>Usá nuestra flota</b><p>¿Ya vendés por WhatsApp o teléfono? Pedí un rider de Modo Ya, entregale el pedido con código y seguí el envío en vivo.</p><span class="serv__go">Quiero usar la flota <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="serv serv--rider reveal">
+        <span class="serv__ic"><svg class="i" aria-hidden="true"><use href="#i-moto"/></svg></span>
+        <span class="serv__txt"><b>¿Tenés moto? Sumate como rider</b><p>Repartí con tus horarios y cobrá todas las semanas.</p></span>
+        <a class="btn btn--dark" href="#riders">Quiero ser rider</a>
+      </div>
+    </div>
+  </section>
+
   <div class="tear" data-above="#0A0A0A" data-below="#F4F4F6"></div>
 
   <!-- =====================================================================
@@ -746,7 +856,7 @@ document.addEventListener("error", e => {
   <section class="section s-light" id="que-comemos">
     <div class="wrap">
       <div class="reveal">
-        <div class="stop-label" data-stop="1"><b>1</b> Parada 1</div>
+        <div class="stop-label" data-stop="2"><b>2</b> Parada 2</div>
         <h2 class="h2"><span class="underline-speed">¿Qué comemos?</span></h2>
         <p class="lead">Elegí lo que tenés ganas y te mostramos qué locales de Malargüe están abiertos.</p>
       </div>
@@ -787,7 +897,7 @@ document.addEventListener("error", e => {
   <section class="section s-white" id="como-funciona">
     <div class="wrap">
       <div class="reveal">
-        <div class="stop-label" data-stop="2"><b>2</b> Parada 2</div>
+        <div class="stop-label" data-stop="3"><b>3</b> Parada 3</div>
         <h2 class="h2"><span class="underline-speed">Cómo funciona</span></h2>
         <p class="lead">Tres pasos y la comida está en tu puerta.</p>
       </div>
@@ -823,13 +933,13 @@ document.addEventListener("error", e => {
   <section class="section locales" id="para-locales">
     <div class="wrap">
       <div class="reveal">
-        <div class="stop-label" data-stop="3"><b>3</b> Parada 3 · Para locales</div>
+        <div class="stop-label" data-stop="4"><b>4</b> Parada 4 · Para locales</div>
         <h2 class="h2">¿Tenés un local? <span class="y">Subite a Modo Ya.</span></h2>
-        <p class="lead">Estamos sumando a los primeros locales de Malargüe. Pre-inscribite gratis y sé de los primeros en aparecer en la app.</p>
+        <p class="lead">Recibí pedidos por la app o usá nuestra flota de riders para mandar los pedidos que ya te llegan por WhatsApp o teléfono. Pre-inscribite gratis y sé de los primeros.</p>
         <ul class="benefits reveal-stagger">
           <li style="--i:0"><span class="ic" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-trend"/></svg></span><div><b>Más ventas sin salir del local</b><span>Te llegan pedidos de todo Malargüe desde el celular.</span></div></li>
           <li style="--i:1"><span class="ic" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-list"/></svg></span><div><b>Tu menú online, siempre actualizado</b><span>Cambiás precios, fotos y promos en un minuto.</span></div></li>
-          <li style="--i:2"><span class="ic" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-moto"/></svg></span><div><b>Repartidores o delivery propio</b><span>Usá nuestros cadetes o seguí con los tuyos.</span></div></li>
+          <li style="--i:2"><span class="ic" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-moto"/></svg></span><div><b>Usá nuestra flota para tus envíos</b><span>Pedí un rider para cualquier pedido tuyo, aunque no venga de la app.</span></div></li>
           <li style="--i:3"><span class="ic" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg></span><div><b>Panel simple para gestionar pedidos</b><span>Recibís, preparás y entregás con código de retiro.</span></div></li>
           <li style="--i:4"><span class="ic" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-gift"/></svg></span><div><b>Beneficio de lanzamiento</b><span>Condiciones especiales para los primeros inscriptos.</span></div></li>
         </ul>
@@ -882,6 +992,14 @@ document.addEventListener("error", e => {
             <input id="f-hor" name="horario" type="text" placeholder="Ej: Mar a Dom, 19 a 00 hs" required>
             <span class="err">Contanos en qué horario abrís.</span>
           </div>
+          <fieldset class="field" id="f-uso-wrap">
+            <legend>¿Cómo querés usar Modo Ya?</legend>
+            <div class="chips">
+              <label><input type="checkbox" name="uso" value="Recibir pedidos por la app" id="f-uso1"><span>Recibir pedidos por la app</span></label>
+              <label><input type="checkbox" name="uso" value="Mandar mis pedidos con sus riders" id="f-uso2"><span>Mandar mis pedidos con sus riders</span></label>
+            </div>
+            <span class="err">Elegí al menos una opción.</span>
+          </fieldset>
           <fieldset class="field" id="f-deliv-wrap">
             <legend>¿Tenés delivery propio?</legend>
             <div class="seg">
@@ -920,7 +1038,108 @@ document.addEventListener("error", e => {
     </div>
   </section>
 
-  <div class="tear" data-above="#0A0A0A" data-below="#F5C518"></div>
+  <div class="tear" data-above="#0A0A0A" data-below="#F4F4F6"></div>
+
+  <!-- =====================================================================
+       PARADA 4 · SUMATE COMO RIDER (PRE-INSCRIPCIÓN DE REPARTIDORES)
+       ===================================================================== -->
+  <section class="section s-light riders" id="riders">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="stop-label" data-stop="5"><b>5</b> Parada 5 · Riders</div>
+        <h2 class="h2">¿Tenés moto? <span class="y">Sumate como rider.</span></h2>
+        <p class="lead">Repartí en Malargüe con tus horarios. Pre-inscribite y te avisamos cuando arranquemos a validar riders.</p>
+        <ul class="benefits reveal-stagger">
+          <li style="--i:0"><span class="ic" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg></span><div><b>Vos elegís cuándo</b><span>Te conectás desde la app cuando querés trabajar y te desconectás cuando no.</span></div></li>
+          <li style="--i:1"><span class="ic" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-route"/></svg></span><div><b>Viajes cerca tuyo</b><span>Te ofrecemos pedidos de locales cercanos y ves la ganancia antes de aceptar.</span></div></li>
+          <li style="--i:2"><span class="ic" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-wallet"/></svg></span><div><b>Cobrás todas las semanas</b><span>Tus ganancias se liquidan a tu CBU o a Mercado Pago.</span></div></li>
+          <li style="--i:3"><span class="ic" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg></span><div><b>Entregas seguras</b><span>Retirás y entregás con código, así no hay pedidos en disputa.</span></div></li>
+        </ul>
+        <div class="rider-earn">
+          <span class="rider-earn__ic"><svg class="i" aria-hidden="true"><use href="#i-moto"/></svg></span>
+          <div><b>Moto, bici o auto</b><span>Necesitás DNI, licencia y seguro vigentes (si usás moto o auto).</span></div>
+        </div>
+      </div>
+
+      <div class="form-card reveal" id="riderCard">
+        <h3>Pre-inscribite como rider</h3>
+        <p>Te lleva 1 minuto. Después te pedimos la documentación desde la app.</p>
+        <form class="form" id="riderForm" novalidate>
+          <div class="field">
+            <label for="r-nombre">Nombre y apellido</label>
+            <input id="r-nombre" name="nombre" type="text" placeholder="Ej: Lucas Martínez" autocomplete="name" required>
+            <span class="err">Contanos cómo te llamás.</span>
+          </div>
+          <div class="grid2">
+            <div class="field">
+              <label for="r-wa">WhatsApp</label>
+              <input id="r-wa" name="whatsapp" type="tel" inputmode="tel" placeholder="260 4XX-XXXX" autocomplete="tel" required>
+              <span class="err">Poné un número con código de área (mínimo 10 dígitos).</span>
+            </div>
+            <div class="field">
+              <label for="r-mail">Email</label>
+              <input id="r-mail" name="email" type="email" inputmode="email" placeholder="tuemail@gmail.com" autocomplete="email" required>
+              <span class="err">Revisá el email, parece incompleto.</span>
+            </div>
+          </div>
+          <fieldset class="field" id="r-veh-wrap">
+            <legend>¿Con qué repartís?</legend>
+            <div class="seg">
+              <label><input type="radio" name="vehiculo" value="Moto" id="r-veh-moto"><span>Moto</span></label>
+              <label><input type="radio" name="vehiculo" value="Bici" id="r-veh-bici"><span>Bici</span></label>
+              <label><input type="radio" name="vehiculo" value="Auto" id="r-veh-auto"><span>Auto</span></label>
+            </div>
+            <span class="err">Elegí una opción.</span>
+          </fieldset>
+          <div class="grid2">
+            <div class="field">
+              <label for="r-zona">Barrio o zona</label>
+              <input id="r-zona" name="zona" type="text" placeholder="Ej: Centro, Las Vegas, Pata Mora" required>
+              <span class="err">Contanos por qué zona te movés.</span>
+            </div>
+            <div class="field">
+              <label for="r-docs">Licencia y seguro</label>
+              <select id="r-docs" name="documentacion" required>
+                <option value="">Elegí una opción</option>
+                <option>Tengo todo al día</option>
+                <option>En trámite</option>
+                <option>No tengo / Reparto en bici</option>
+              </select>
+              <span class="err">Elegí una opción.</span>
+            </div>
+          </div>
+          <fieldset class="field" id="r-disp-wrap">
+            <legend>¿Cuándo podés repartir?</legend>
+            <div class="chips">
+              <label><input type="checkbox" name="disponibilidad" value="Mediodía" id="r-d1"><span>Mediodía</span></label>
+              <label><input type="checkbox" name="disponibilidad" value="Tarde" id="r-d2"><span>Tarde</span></label>
+              <label><input type="checkbox" name="disponibilidad" value="Noche" id="r-d3"><span>Noche</span></label>
+              <label><input type="checkbox" name="disponibilidad" value="Fines de semana" id="r-d4"><span>Fines de semana</span></label>
+            </div>
+            <span class="err">Elegí al menos un horario.</span>
+          </fieldset>
+          <div class="field" id="r-ok-wrap">
+            <label class="check"><input type="checkbox" id="r-ok" name="mayor_y_contacto"> Soy mayor de 18 años y acepto que Modo Ya me contacte por WhatsApp o email.</label>
+            <span class="err">Tenés que ser mayor de 18 y aceptar el contacto.</span>
+          </div>
+          <button class="btn btn--primary btn--lg" type="submit" id="riderBtn">Quiero ser rider</button>
+          <p class="form-note">Tus datos solo se usan para contactarte por la pre-inscripción.</p>
+        </form>
+        <svg class="cross-moto" viewBox="0 0 64 44" aria-hidden="true"><use href="#moto"/></svg>
+        <div class="success" role="status" aria-live="polite">
+          <div class="success__check">✓</div>
+          <h3>¡Ya estás en la lista!</h3>
+          <p>Te escribimos por WhatsApp cuando arranquemos a validar riders en Malargüe.</p>
+          <div class="btns">
+            <a class="btn btn--primary" href="#descargar">Descargar la app</a>
+            <button class="btn btn--dark" type="button" id="riderReset">Inscribir a otra persona</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="tear" data-above="#F4F4F6" data-below="#F5C518"></div>
 
   <!-- =====================================================================
        6. PARADA 4 · DESCARGÁ LA APP
@@ -930,7 +1149,7 @@ document.addEventListener("error", e => {
     <div class="speed-edge speed-edge--r" aria-hidden="true"><i style="width:110px"></i><i style="width:64px"></i><i style="width:90px;margin-right:24px"></i></div>
     <div class="wrap">
       <div class="reveal">
-        <div class="stop-label" data-stop="4"><b>4</b> Parada 4</div>
+        <div class="stop-label" data-stop="6"><b>6</b> Parada 6</div>
         <h2 class="h2">Tu antojo, a un toque. Descargá Modo Ya.</h2>
         <p class="lead">Todos los locales de Malargüe en una app. Pedí, seguí tu envío en vivo y sumá puntos en el Club Modo Ya.</p>
         <!-- [LINKS] Reemplazar href="#" por los links reales de las tiendas -->
@@ -980,6 +1199,7 @@ document.addEventListener("error", e => {
       <div class="hero__ctas">
         <a class="btn btn--primary btn--lg" href="#descargar">Descargar la app</a>
         <a class="btn btn--ghost btn--lg" href="#para-locales">Sumá tu local</a>
+        <a class="btn btn--ghost btn--lg" href="#riders">Quiero ser rider</a>
       </div>
     </div>
   </section>
@@ -1008,6 +1228,7 @@ document.addEventListener("error", e => {
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#como-funciona">Cómo funciona</a></li>
         <li><a href="#para-locales">Para locales</a></li>
+        <li><a href="#riders">Sumate como rider</a></li>
         <li><a href="#descargar">Descargar la app</a></li>
       </ul>
     </div>
@@ -1345,6 +1566,9 @@ function validate(){
   const deliv = form.querySelector('input[name="delivery"]:checked');
   setError(document.getElementById("f-deliv-wrap"), !deliv);
   if (!deliv && !firstBad) firstBad = document.getElementById("f-deliv-si");
+  const uso = form.querySelectorAll('input[name="uso"]:checked').length;
+  setError(document.getElementById("f-uso-wrap"), !uso);
+  if (!uso && !firstBad) firstBad = document.getElementById("f-uso1");
   const ok = document.getElementById("f-ok");
   setError(document.getElementById("f-ok-wrap"), !ok.checked);
   if (!ok.checked && !firstBad) firstBad = ok;
@@ -1359,6 +1583,7 @@ form.addEventListener("input", e => {
 });
 form.addEventListener("change", e => {
   if (e.target.name === "delivery") setError(document.getElementById("f-deliv-wrap"), false);
+  if (e.target.name === "uso") setError(document.getElementById("f-uso-wrap"), false);
   if (e.target.id === "f-ok" && e.target.checked) setError(document.getElementById("f-ok-wrap"), false);
 });
 // Envío: cambiar FORM_CONFIG arriba para conectarlo de verdad
@@ -1379,7 +1604,10 @@ form.addEventListener("submit", async e => {
   e.preventDefault();
   const bad = validate();
   if (bad) { bad.focus({ preventScroll: true }); bad.scrollIntoView({ behavior: "smooth", block: "center" }); return; }
-  const data = Object.fromEntries(new FormData(form));
+  const fdLocal = new FormData(form);
+  const data = Object.fromEntries(fdLocal);
+  data.uso = fdLocal.getAll("uso").join(", ");
+  data.tipo = "local";
   data.acepta_contacto = "Sí";
   data.fecha = new Date().toISOString();
   submitBtn.disabled = true;
@@ -1401,4 +1629,77 @@ document.getElementById("resetForm").addEventListener("click", () => {
   card.classList.remove("is-sent");
   document.getElementById("f-local").focus();
 });
+
+/* =====================================================================
+   FORMULARIO DE RIDERS
+   ===================================================================== */
+(function riderForm(){
+  const form = document.getElementById("riderForm");
+  const card = document.getElementById("riderCard");
+  const btn = document.getElementById("riderBtn");
+  const rules = {
+    "r-nombre": v => v.trim().length >= 3,
+    "r-wa":     v => v.replace(/\D/g, "").length >= 10,
+    "r-mail":   v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()),
+    "r-zona":   v => v.trim().length >= 2,
+    "r-docs":   v => v !== ""
+  };
+  function validate(){
+    let firstBad = null;
+    for (const [id, ok] of Object.entries(rules)) {
+      const el = document.getElementById(id), bad = !ok(el.value);
+      setError(el.closest(".field"), bad);
+      if (bad && !firstBad) firstBad = el;
+    }
+    const veh = form.querySelector('input[name="vehiculo"]:checked');
+    setError(document.getElementById("r-veh-wrap"), !veh);
+    if (!veh && !firstBad) firstBad = document.getElementById("r-veh-moto");
+    const disp = form.querySelectorAll('input[name="disponibilidad"]:checked').length;
+    setError(document.getElementById("r-disp-wrap"), !disp);
+    if (!disp && !firstBad) firstBad = document.getElementById("r-d1");
+    const ok = document.getElementById("r-ok");
+    setError(document.getElementById("r-ok-wrap"), !ok.checked);
+    if (!ok.checked && !firstBad) firstBad = ok;
+    return firstBad;
+  }
+  form.addEventListener("input", e => {
+    const wrap = e.target.closest(".field");
+    if (wrap && wrap.classList.contains("has-error")) {
+      const rule = rules[e.target.id];
+      if (!rule || rule(e.target.value)) setError(wrap, false);
+    }
+  });
+  form.addEventListener("change", e => {
+    if (e.target.name === "vehiculo") setError(document.getElementById("r-veh-wrap"), false);
+    if (e.target.name === "disponibilidad") setError(document.getElementById("r-disp-wrap"), false);
+    if (e.target.id === "r-ok" && e.target.checked) setError(document.getElementById("r-ok-wrap"), false);
+  });
+  form.addEventListener("submit", async e => {
+    e.preventDefault();
+    const bad = validate();
+    if (bad) { bad.focus({ preventScroll: true }); bad.scrollIntoView({ behavior: "smooth", block: "center" }); return; }
+    const fd = new FormData(form);
+    const data = Object.fromEntries(fd);
+    data.tipo = "rider";
+    data.disponibilidad = fd.getAll("disponibilidad").join(", ");
+    data.mayor_y_contacto = "Sí";
+    data.fecha = new Date().toISOString();
+    btn.disabled = true;
+    btn.textContent = "Enviando…";
+    try {
+      await sendPreinscripcion(data);
+      card.classList.add("is-sent");
+      btn.textContent = "Quiero ser rider";
+    } catch (err) {
+      btn.textContent = "No se pudo enviar. Probá de nuevo";
+    } finally {
+      btn.disabled = false;
+    }
+  });
+  document.getElementById("riderReset").addEventListener("click", () => {
+    form.reset();
+    card.classList.remove("is-sent");
+    document.getElementById("r-nombre").focus();
+  });
+})();
 </script>
