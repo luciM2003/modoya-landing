@@ -8,6 +8,17 @@ Objetivos: que la gente descargue la app y que los locales gastronómicos se pre
 - `index.html` — la página completa (HTML, CSS y JavaScript en un solo archivo).
 - `img/` — fotos de comida recortadas sin fondo (Unsplash, licencia libre). Para cambiarlas, reemplazá los archivos manteniendo el mismo nombre.
 
+## Lanzamiento
+
+Mientras la app no esté en las tiendas, la página muestra avisos de "Próximamente" (barra de arriba, etiquetas "Pronto" en las tiendas, etc.).
+El día del lanzamiento, en `index.html` cambiá:
+
+```js
+const PROXIMAMENTE = true;
+```
+
+por `false` y todos los avisos desaparecen.
+
 ## Pendiente antes de publicar
 
 Buscá estas marcas en `index.html` y reemplazalas por los datos reales:
